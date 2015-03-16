@@ -1,0 +1,290 @@
+.mainContainer{
+	margin: 0 auto;
+	width: 461px;
+	border: 1px solid #157fcc;
+}
+#customLoginDiv{
+	float: left;
+	border-right: 1px solid #157fcc;
+}
+#customBtnDiv{
+	float:left;
+}
+.clearFloat{
+	clear: both;
+}
+.floatLeft{
+	float:left;
+}
+.floatRight{
+	float:right;
+}
+.northHeader{
+	background-color: #d3e3f0;
+	padding: 5px 0px;
+}
+.phoneCall {
+    background-image: url(images/phoneCall.png) !important;
+}
+.callNotificaion{
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: bold;
+}
+.callNotificaion td{
+	font-size: 16px;
+	line-height: 21px;
+	font-weight: bold;
+	width: 100px;
+}
+.searchBtn {
+    background-image: url(images/queryIcon.png) !important;
+}
+.footerTbl{
+	width: 100%;
+}
+.footerTbl td{
+	font-size: 11px;
+	border: 1px solid #000;
+	padding: 0px 5px;
+}
+.endCall {
+    background-image: url(images/closeIcon.png) !important;
+}
+.verticalTabs{
+    padding: 5px 0px 5px 0px;
+    background-color: #cbddf3;
+    background-image: -moz-linear-gradient(center top , #dae7f6, #cddef3 45%, #abc7ec 46%, #abc7ec 50%, #b8cfee 51%, #cbddf3);
+    border-color: #99bce8;
+    border-top-color: #f3f7fb;
+    border-radius: 0px;
+}
+.verticalTabs .x-btn-inner-center{
+    text-align: left;
+    color: #04408c;
+    font-size: 11px;
+    font-weight: bold;
+    font-family: tahoma,arial,verdana,sans-serif;
+}
+.leftAlignBtn .x-btn-inner-center{
+	text-align: left;
+}
+.requiredFld{
+	color:red;
+	font-weight:bold;
+}
+.popupHeader{
+	font-size:20px;
+	color: #ff0000;
+}
+.addbutton{
+	background-image: url(images/addIcon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.searchbutton{
+	background-image: url(images/searchIcon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.savebutton{
+    background-image: url(images/saveIcon.png) !important;
+}
+.phone1button{
+	background-image: url(images/phone1Icon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.closebutton{
+	background-image: url(images/closeIcon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.crossbutton{
+	background-image: url(images/crossIcon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.phone2button{
+	background-image: url(images/phone2Icon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.greenbutton{
+	background-image: url(images/greenIcon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.greybutton{
+	background-image: url(images/greyIcon.png) !important;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+.dashboard {
+    background-image:url(images/icons/fam/dashboard.png);
+}
+.complaints {
+    background-image:url(images/icons/fam/angry.png);
+}
+.order {
+    background-image:url(images/icons/fam/order.png);
+}
+.callBack {
+    background-image:url(images/icons/fam/callback.png);
+}
+.calls {
+    background-image:url(images/icons/fam/call.png);
+}
+.otherLanguage {
+    background-image:url(images/icons/fam/language.png);
+}
+.callQualityAnalysis {
+    background-image:url(images/icons/fam/analysis.png);
+}
+.advanceBooking {
+   background-image:url(images/icons/fam/analysis.png);
+}
+.dndApprovalRejection {
+    background-image:url(images/icons/fam/dnd.png);
+}
+.attendance {
+    background-image:url(images/icons/fam/attendance.png);
+}
+.administrator {
+    background-image:url(images/icons/fam/admin.png);
+}
+#searchFormDiv{
+	/*border: 1px solid #157fcc;*/
+}
+#complaintGrid .x-grid-body, #complaintGrid .x-grid-body .x-grid-view, #complaintGrid .x-grid-header-ct{
+	width:100% !important;
+}
+.customTreeContainer{
+	padding: 5px;
+}
+.customTreeLink{
+    background: transparent url(images/icons/fam/tab_new.png) no-repeat left top;
+	font-size: 11px;
+	color: #000000;
+	text-decoration: none;
+	padding: 0px 0px 5px 20px;
+    display: block;
+}
+.x-hide-clip{
+	display: none;
+}
+.nextbutton{
+    background-image: url(images/nextIcon.png) !important;
+}
+.prevbutton{
+    background-image: url(images/prevIcon.png) !important;
+}
+.cancelbutton{
+    background-image: url(images/closeIcon.png) !important;
+}
+.sendButton{
+    background-image: url(images/icons/fam/accept.png) !important;
+}
+.exportToExcelBtn {
+    background-image: url(images/exportToExcel.png) !important;
+}
+.x-boundlist-item div.chkCombo{
+	background: transparent url(images/unchecked.gif) left center no-repeat !important;
+	padding: 0px 3px 0px 20px;
+}
+.x-boundlist-selected div.chkCombo{
+	background: #cbdaf0 url(images/checked.gif) left center no-repeat !important;
+}
+.mycard-background-class {
+    background-color: #9AFE2E;
+    background-image: none;
+}
+.callHistoryList{
+    background-color: #d1ddef;
+    border: 1px solid #99bce8;
+    padding: 5px;
+    width: 224px;
+    margin: 0 5px 5px 5px;
+}
+#customerDeatailContainer-targetEl{
+    width: 100% !important;
+    background-color: #ffffff !important;
+    height: 100% !important;
+}
+#phoneDetailscontactContainer, #contactContainer{
+    border: 1px solid #e7e7e7;
+    overflow: auto;
+}
+table.customerDeatail td.PRIMARY{
+    background-color: #0040D0;
+    color: #ffffff;
+    text-align: center;
+    width: 65px;
+}
+table.customerDeatail td.ACTIVE{
+    background-color: #77BC71;
+    color: #ffffff;
+    text-align: center;
+    width: 65px;
+}
+table.customerDeatail td.INACTIVE{
+    background-color: #660000;
+    color: #ffffff;
+    text-align: center;
+    width: 65px;
+}
+table.customerDeatail td.INVALID{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    width: 65px;
+}
+table.customerDeatail{
+    width: 100%;
+    font-size: 12px;
+}
+table.customerDeatail td{
+    padding: 5px;
+    border-right: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+table.customerDeatail td:last-child{
+    padding: 5px;
+    border-right: 0px none;
+    border-bottom: 1px solid #e7e7e7;
+}
+#callHistoryContainer-innerCt, #customerDeatailContainer-innerCt{
+    width: 250px !important;
+    overflow-y: auto;
+}
+.callHistoryList1{
+    background-color: #dfe9f6;
+    padding: 5px;
+}
+.loginBtn{
+    background-color: #4d90fe;
+    background-image: -moz-linear-gradient(center top , #4d90fe, #4787ed);
+    background-image: -webkit-linear-gradient(#4d90fe, #4787ed);
+    border: 1px solid #3079ed;
+    color: #fff !important;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+}
+.loginBtn span{
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: bolder !important;
+}
+.orderCount{
+    font-weight: bold;
+    text-align: center;
+    font-size: 14px;
+}
+#OrderCounter{
+    color: #ff0000;
+    font-size: 50px;
+    text-align: center;
+}
+#callHistoryContainer{
+    background-color: #d1ddef;
+    padding-top: 5px;
+}

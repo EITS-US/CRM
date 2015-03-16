@@ -1,0 +1,10 @@
+{
+"name": "CALLS-MONGOOSE",
+"version": "1.0.0",
+"dependencies":
+{
+
+"mongoose" : "3.8.17"
+
+}
+}

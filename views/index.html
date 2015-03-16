@@ -1,0 +1,79 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>CRM</title>
+
+    <!-- ExtJS -->
+    <script type="text/javascript" src="js/lib/ext-all-debug.js"></script>
+
+    <!-- Shared -->
+    <link rel="stylesheet" type="text/css" href="css/ext-theme-neptune/ext-theme-neptune-all-debug.css" />
+	<link rel="stylesheet" type="text/css" href="css/customStyle.css" />
+
+    <script type="text/javascript" src="js/CrmApp/crmApp.js"></script>
+	<script type="text/javascript" src="js/CrmApp/views/newCallPopup.js"></script>
+	<script type="text/javascript" src="js/CrmApp/views/tempGrid.js"></script>
+    <script src='http://localhost:10540/socket.io/socket.io.js'></script>
+	<script type="text/javascript">
+
+	  var iosocket = io.connect("localhost:10540");
+	
+	 
+	</script>
+</head>
+<body>
+    <!-- use class="x-hide-display" to prevent a brief flicker of the content -->
+	<div id="north" class="x-hide-display">
+        <div class="northHeader">Call Center Ver <span id="versionId">1.166</span> (Updated on <span id="updateOn">13 June 2014 10:00 PM</span>)</div>
+		<div id="callFormDiv" class="floatLeft"></div>
+		<div id="notificationFormDiv" class="floatLeft callNotificaion">
+			<table>
+				<tr><td>Targeted</td><td id="targetedCalls">0</td></tr>
+				<tr><td>Achieved</td><td id="achievedCalls">0</td></tr>
+			</table>
+		</div>
+		<div id="mainControlFormDiv" class="floatRight"></div>
+		<div class="clearFloat"></div>
+		<div class="reportHeader">Reports</div>
+    </div>
+	<div id="complaints" class="x-hide-display">
+        <div id="searchFormDiv"></div>
+		<div id="complaintGrid"></div>
+    </div>	
+    <div id="order" class="x-hide-display">
+        <p><b>order tab</b></p>
+    </div>
+    <div id="callBack" class="x-hide-display">
+        <p><b>callBack tab</b></p>
+    </div>
+	<div id="calls" class="x-hide-display">
+        <p><b>calls tab</b></p>
+    </div>
+    <div id="otherLanguage" class="x-hide-display">
+        <p><b>otherLanguage tab</b></p>
+    </div>
+	<div id="callQualityAnalysis" class="x-hide-display">
+        <p><b>callQualityAnalysis tab</b></p>
+    </div>
+	<div id="dndApprovalRejection" class="x-hide-display">
+        <p><b>dndApprovalRejection tab</b></p>
+    </div>
+    <div id="attendance" class="x-hide-display">
+        <p><b>attendance tab</b></p>
+    </div>
+    <div id="south" class="x-hide-display">
+        <div id="footerDiv"></div>
+		<table class="footerTbl">
+			<tr>
+				<td>ALTITUDE</td>
+				<td>Name: <span>ADMINISTRATOR</span></td>
+				<td>Department: <span>SALES</span></td>
+				<td>Designation: <span>TEAM LEADER</span></td>
+				<td>07/28/2014 3:44:50</td>
+				<td>Extension: <span>EXT7355</span></td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+    </div>
+</body>
+</html>

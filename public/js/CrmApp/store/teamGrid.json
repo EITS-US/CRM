@@ -1,0 +1,7 @@
+{
+    success: true,
+    teams: [
+        { agents : "Kunal Krishna", team : "Tamil", subteam : "Tamil_1", designation : "Sales Agent" },
+        { agents : "Amit Singh", team : "Tamil", subteam : "Tamil_1", designation : "Sales Agent" }
+    ]
+}

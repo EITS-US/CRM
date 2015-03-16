@@ -1,0 +1,155 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <title>CRM</title>
+
+    <!-- ExtJS -->
+    <script type="text/javascript" src="/js/lib/ext-all-debug.js"></script>
+
+    <!-- Shared -->
+    <link rel="stylesheet" type="text/css" href="/css/ext-theme-classic/ext-theme-classic-all-debug.css" />
+	<link rel="stylesheet" type="text/css" href="/css/customStyle.css" />
+
+    <script type="text/javascript" src="/js/CrmApp/crmApp.js"></script>
+
+	<script src='/js/lib//socket.io.js'></script>
+	<script type="text/javascript">
+        var iosocket = "";
+        var gracefullLogout = false;
+
+        try{
+            iosocket = io.connect("localhost:10540");
+        }catch (e){
+
+            console.log("connection not established");
+        }
+
+        window.onbeforeunload = function(e) {
+
+            if(!gracefullLogout){
+
+            iosocket.emit("LOGOUT", "browser closed");
+                window.localStorage.setItem('token', '');
+
+            Ext.Ajax.request({
+
+                url: '/crm/api/logout',
+                method: 'GET',
+                failure:function(){
+
+                    window.location.href = "/crm/login.html";
+                    window.localStorage.setItem('token', '');
+                },
+                success:function(){
+
+                    window.location.href = "/crm/login.html";
+                    window.localStorage.setItem('token', '');
+                }
+
+            });
+
+                return 'Force Logout';
+
+            }
+
+        };
+
+
+      /*  window.addEventListener("beforeunload", function (e) {
+            popupStatusFlag = "closed";
+            alert(popupStatusFlag);
+            iosocket.disconnect();
+            return;
+
+        });*/
+
+	</script>
+</head>
+<body>
+	<div id="north" class="x-hide-display">
+        <div class="northHeader">Call Center Ver <span id="versionId">1.166</span> (Updated on <span id="updateOn">13 June 2014 10:00 PM</span>)</div>
+		<div id="callFormDiv" class="floatLeft"></div>
+		<!--div id="notificationFormDiv" class="floatLeft callNotificaion">
+			<table>
+				<tr><td>Targeted</td><td id="targetedCalls">0</td></tr>
+				<tr><td>Achieved</td><td id="achievedCalls">0</td></tr>
+			</table>
+		</div-->
+		<div id="mainControlFormDiv" class="floatRight"></div>
+		<div class="clearFloat"></div>
+    </div>
+    <div id="dashboard" class="x-hide-display">
+        <p class="customTreeContainer">
+            <a href="javascript:void(0);" class="customTreeLink">dashboard tab</a>
+        </p>
+    </div>
+	<div id="complaints" class="x-hide-display">
+		<p class="customTreeContainer">
+			<a href="javascript:void(0);" class="customTreeLink">complaints tab</a>
+		</p>
+    </div>	
+    <div id="order" class="x-hide-display">
+        <p class="customTreeContainer">
+			<a href="javascript:void(0);" class="customTreeLink">order tab</a>
+		</p>
+    </div>
+    <div id="callBack" class="x-hide-display">
+        <p class="customTreeContainer">
+			<a href="javascript:void(0);" class="customTreeLink">callBack tab</a>
+		</p>
+    </div>
+	<div id="calls" class="x-hide-display">
+        <p class="customTreeContainer">
+			<a href="javascript:void(0);" class="customTreeLink">calls tab</a>
+		</p>
+    </div>
+    <div id="advanceBooking" class="x-hide-display">
+        <p class="customTreeContainer">
+            <a href="javascript:void(0);" class="customTreeLink">Advance Booking tab</a>
+        </p>
+    </div>
+    <div id="otherLanguage" class="x-hide-display">
+        <p class="customTreeContainer">
+			<a href="javascript:void(0);" class="customTreeLink">otherLanguage tab</a>
+		</p>
+    </div>
+
+	<div id="dndApprovalRejection" class="x-hide-display">
+        <p class="customTreeContainer">
+			<a href="javascript:void(0);" class="customTreeLink">dndApprovalRejection tab</a>
+		</p>
+    </div>
+    <div id="attendance" class="x-hide-display">
+        <p class="customTreeContainer">
+			<a href="javascript:void(0);" class="customTreeLink">attendance tab</a>
+		</p>
+    </div>
+    <div id="administrator" class="x-hide-display">
+        <p class="customTreeContainer">
+            <a href="javascript:void(0);" class="customTreeLink" onclick="loadUserManagementPanel();">User Management</a>
+            <a href="javascript:void(0);" class="customTreeLink" onclick="loadTeamManagementPanel();">Team Management</a>
+            <a href="javascript:void(0);" class="customTreeLink" onclick="loadTargetManagementPanel();">Target Management</a>
+        </p>
+    </div>
+    <div id="south" class="x-hide-display">
+        <div id="footerDiv"></div>
+		<table class="footerTbl">
+			<tr>
+				<td>Sorce: <span id = "source">ALT</span></td>
+				<td>Name: <span id = "userRole">ADMINISTRATOR</span></td>
+				<td>Department: <span id = "department">SALES</span></td>
+				<td>Designation: <span id = "designation">TEAM LEADER</span></td>
+				<td> <span id = "time">06/28/2014 3:44:50</span></td>
+				<td>Extension: <span id = "extention">EXT7355</span></td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+    </div>
+	<div id="center" class="x-hide-display">
+        <div id="searchFormDiv"></div>
+		<div id="complaintGrid"></div>	
+	</div>
+	<div id="east" class="x-hide-display">
+	</div>
+</body>
+</html>
