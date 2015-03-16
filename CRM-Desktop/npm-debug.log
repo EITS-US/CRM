@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'gip_request_process.js' ]
+2 info using npm@1.4.9
+3 info using node@v0.10.28
+4 verbose node symlink C:\Program Files\nodejs\\node.exe
+5 warn package.json CRM-web-app@1.0.0 No description
+6 warn package.json CRM-web-app@1.0.0 No repository field.
+7 warn package.json CRM-web-app@1.0.0 No README data
+8 verbose readDependencies using package.json deps
+9 verbose cache add [ 'gip_request_process.js', null ]
+10 verbose cache add name=undefined spec="gip_request_process.js" args=["gip_request_process.js",null]
+11 verbose parsed url { protocol: null,
+11 verbose parsed url   slashes: null,
+11 verbose parsed url   auth: null,
+11 verbose parsed url   host: null,
+11 verbose parsed url   port: null,
+11 verbose parsed url   hostname: null,
+11 verbose parsed url   hash: null,
+11 verbose parsed url   search: null,
+11 verbose parsed url   query: null,
+11 verbose parsed url   pathname: 'gip_request_process.js',
+11 verbose parsed url   path: 'gip_request_process.js',
+11 verbose parsed url   href: 'gip_request_process.js' }
+12 silly lockFile 68fb1d19-gip-request-process-js gip_request_process.js
+13 verbose lock gip_request_process.js C:\Users\am015si\AppData\Roaming\npm-cache\68fb1d19-gip-request-process-js.lock
+14 verbose chmod C:\Users\am015si\AppData\Local\Temp\npm-8460-dKNbmPRr\1422441218241-0.07415069569833577\tmp.tgz 644
+15 verbose tar unpack C:\Users\am015si\AppData\Local\Temp\npm-8460-dKNbmPRr\1422441218241-0.07415069569833577\tmp.tgz
+16 silly lockFile dabd66c3-c0785d913tmp-4c3f95db2714package tar://C:\Users\am015si\AppData\Roaming\npm-cache\tmp_bebc0785d913tmp_4c3f95db2714package
+17 verbose lock tar://C:\Users\am015si\AppData\Roaming\npm-cache\tmp_bebc0785d913tmp_4c3f95db2714package C:\Users\am015si\AppData\Roaming\npm-cache\dabd66c3-c0785d913tmp-4c3f95db2714package.lock
+18 silly lockFile 8c7afb76-8241-0-07415069569833577-tmp-tgz tar://C:\Users\am015si\AppData\Local\Temp\npm-8460-dKNbmPRr\1422441218241-0.07415069569833577\tmp.tgz
+19 verbose lock tar://C:\Users\am015si\AppData\Local\Temp\npm-8460-dKNbmPRr\1422441218241-0.07415069569833577\tmp.tgz C:\Users\am015si\AppData\Roaming\npm-cache\8c7afb76-8241-0-07415069569833577-tmp-tgz.lock
+20 silly gunzTarPerm modes [ '755', '644' ]
+21 error not a package C:\Users\am015si\AppData\Local\Temp\npm-8460-dKNbmPRr\1422441218241-0.07415069569833577\tmp.tgz
+22 silly lockFile dabd66c3-c0785d913tmp-4c3f95db2714package tar://C:\Users\am015si\AppData\Roaming\npm-cache\tmp_bebc0785d913tmp_4c3f95db2714package
+23 silly lockFile dabd66c3-c0785d913tmp-4c3f95db2714package tar://C:\Users\am015si\AppData\Roaming\npm-cache\tmp_bebc0785d913tmp_4c3f95db2714package
+24 silly lockFile 8c7afb76-8241-0-07415069569833577-tmp-tgz tar://C:\Users\am015si\AppData\Local\Temp\npm-8460-dKNbmPRr\1422441218241-0.07415069569833577\tmp.tgz
+25 silly lockFile 8c7afb76-8241-0-07415069569833577-tmp-tgz tar://C:\Users\am015si\AppData\Local\Temp\npm-8460-dKNbmPRr\1422441218241-0.07415069569833577\tmp.tgz
+26 silly lockFile 68fb1d19-gip-request-process-js gip_request_process.js
+27 silly lockFile 68fb1d19-gip-request-process-js gip_request_process.js
+28 verbose addNamed [ 'gip_request_process.js', '' ]
+29 verbose addNamed [ null, '*' ]
+30 silly lockFile dd32d4a3-gip-request-process-js gip_request_process.js@
+31 verbose lock gip_request_process.js@ C:\Users\am015si\AppData\Roaming\npm-cache\dd32d4a3-gip-request-process-js.lock
+32 silly addNameRange { name: 'gip_request_process.js', range: '*', hasData: false }
+33 verbose url raw gip_request_process.js
+34 verbose url resolving [ 'https://registry.npmjs.org/', './gip_request_process.js' ]
+35 verbose url resolved https://registry.npmjs.org/gip_request_process.js
+36 info trying registry request attempt 1 at 16:03:38
+37 http GET https://registry.npmjs.org/gip_request_process.js
+38 http 404 https://registry.npmjs.org/gip_request_process.js
+39 verbose headers { date: 'Wed, 28 Jan 2015 10:33:51 GMT',
+39 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+39 verbose headers   'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=0',
+39 verbose headers   'content-length': '52',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   age: '0',
+39 verbose headers   'x-served-by': 'cache-lax1434-LAX',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1422441231.210698,VS0,VE74',
+39 verbose headers   'keep-alive': 'timeout=10, max=50',
+39 verbose headers   connection: 'Keep-Alive' }
+40 silly registry.get cb [ 404,
+40 silly registry.get   { date: 'Wed, 28 Jan 2015 10:33:51 GMT',
+40 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+40 silly registry.get     'content-type': 'application/json',
+40 silly registry.get     'cache-control': 'max-age=0',
+40 silly registry.get     'content-length': '52',
+40 silly registry.get     'accept-ranges': 'bytes',
+40 silly registry.get     via: '1.1 varnish',
+40 silly registry.get     age: '0',
+40 silly registry.get     'x-served-by': 'cache-lax1434-LAX',
+40 silly registry.get     'x-cache': 'MISS',
+40 silly registry.get     'x-cache-hits': '0',
+40 silly registry.get     'x-timer': 'S1422441231.210698,VS0,VE74',
+40 silly registry.get     'keep-alive': 'timeout=10, max=50',
+40 silly registry.get     connection: 'Keep-Alive' } ]
+41 silly lockFile dd32d4a3-gip-request-process-js gip_request_process.js@
+42 silly lockFile dd32d4a3-gip-request-process-js gip_request_process.js@
+43 error 404 404 Not Found: gip_request_process.js
+43 error 404
+43 error 404 'gip_request_process.js' is not in the npm registry.
+43 error 404 You should bug the author to publish it
+43 error 404 It was specified as a dependency of 'CRM-web-app'
+43 error 404
+43 error 404 Maybe try 'npm search gip request process'
+43 error 404
+43 error 404 Note that you can also install from a
+43 error 404 tarball, folder, or http url, or git url.
+44 error System Windows_NT 6.1.7601
+45 error command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "gip_request_process.js"
+46 error cwd C:\Users\am015si\WebstormProjects\Telebuy\CRM-desktop
+47 error node -v v0.10.28
+48 error npm -v 1.4.9
+49 error code E404
+50 verbose exit [ 1, true ]

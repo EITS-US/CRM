@@ -1,0 +1,18 @@
+mongoimport -d TeleBuyCRM -c pincode --type csv --file all_india_pin_code.csv --headerline
+
+mongoimport -d CRMORDERSDB -c pincodes --type csv --file all_india_pin_code.csv --headerline
+
+mongoimport --host localhost --db TeleBuyCRM --collection pincodes --file all_india_pin_code.csv --headerline --stopOnError
+
+
+
+[{"subject": "Order", "action": "viewall"},{"subject": "Order", "action": "Create"}, {"subject": "Order", "action": "Update"}]
+
+
+
+
+ps aux | grep node
+
+kill all node
+
+netstat -anp tcp | find "10535"

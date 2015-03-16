@@ -1,0 +1,53 @@
+
+{
+
+    "CONTACTID" : "",
+    "ACCOUNTID" : "",
+    "SALUTATION" : "",
+    "FIRSTNAME" : "",
+    "CONTACTNO" : "",
+    "LASTNAME" : "",
+    "EMAIL" : [],
+    "REPORTSTO" : "",
+    "USERTYPE" : "",
+    "CONTACTTYPE" : "",
+    "OTHEREMAIL" : "",
+    "CONTACTREF" : "",
+    "GENDER" : "",
+    "NOTIFYOWNER" : "",
+    "CONTCTSTAT" : "",
+    "CONTLANGID" : "",
+    "CONTLANGDESC" : "",
+    "MEDIAID" : "",
+    "MEDIADESC" : "",
+    "DNDSTATUS" : "",
+    "BALANCEDUE" : "",
+    "TITLE" : "",
+    "ELIMINATEDNO" : "",
+    "CREDITCARD" : "",
+    "BYD_ID" : "",
+    "BYDNOTES" : "",
+    "CREATION_DATE" : "",
+    "LAST_UPDATE_DATE" : "",
+    "SYNCHED_WITH_BYD" : "",
+    "CHANGE_STATE_ID" : "",
+    "CONTACTNO" : [ 
+        NumberLong(9811005678), 
+        NumberLong(9718163345), 
+        NumberLong(9415211175)
+    ],
+    "PRIMARYCONTACTNO" : "9811005678",
+    "CONTACTDETAILS" : {
+        "FAX" : "",
+        "Address" : {
+            "CONTACTDETAILSID" : "",
+            "ADDLINE1" : "Test",
+            "ADDLINE2" : "Test",
+            "ADDLINE3" : "Test",
+            "CITY" : "NOIDA",
+            "PINCODE" : "201010",
+            "STATE" : "UP",
+            "COUNTRY" : "INDIA"
+        }
+    }
+}

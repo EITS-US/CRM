@@ -1,0 +1,103 @@
+var amqp = require('amqplib');
+var all = require('when').all;
+var basename = require('path').basename;
+
+
+var sql = require('mssql');
+
+var config = {
+    user: 'ccapp',
+    password: 'ccapp',
+    server: 'localhost', // You can use 'localhost\\instance' to connect to named instance
+    database: 'PBIP01'
+}
+
+
+var severities = ['GIPREQS'];
+if (severities.length < 1) {
+    console.warn('Usage: %s [info] [warning] [error]',
+        basename(process.argv[1]));
+    process.exit(1);
+}
+
+amqp.connect('amqp://localhost').then(function(conn) {
+    process.once('SIGINT', function() { conn.close(); });
+    return conn.createChannel().then(function(ch) {
+        var ex = 'gip';
+
+        var ok = ch.assertExchange(ex, 'direct', {durable: true});
+
+        ok = ok.then(function() {
+            return ch.assertQueue('gipReqLogQueue', {durable: true});
+        });
+
+        ok = ok.then(function(qok) {
+            var queue = qok.queue;
+            return all(severities.map(function(sev) {
+                ch.bindQueue(queue, ex, sev);
+            })).then(function() { return queue; });
+        });
+
+        ok = ok.then(function(queue) {
+            return ch.consume(queue, function(msg) {
+
+                console.log(msg.fields.routingKey + "----------- Starts ---------------------------------->");
+                var msgContent = msg.content;
+                //msgContent = JSON.parse(msgContent);
+                if(msg.fields.routingKey === 'GIPREQS'){
+
+                    console.log(msgContent);
+
+                    processOrderhdr(msg.fields.routingKey, msgContent, function(err, results){
+                        if(err === null){
+
+                            ch.ack(msg);
+                        }
+
+                    });
+
+
+                }
+            }, {ack: true}).then(function() { console.log("delivered"); });
+        });
+        return ok.then(function() {
+            console.log(' [*] Waiting for logs. To exit press CTRL+C.');
+        });
+
+
+    });
+}).then(null, console.warn);
+
+
+function processOrderhdr(key, value, callback) {
+	value = value.toString();
+	var content = value.split("~");
+	var soapContent = content[0].toString();
+	var guid = content[1].toString();
+	var transactionID = content[2].toString();
+	var accountID = content[3].toString();
+    var connection = new sql.Connection(config);
+    connection.connect();
+    var ps = new sql.PreparedStatement(connection);
+
+    ps.input('RequestLog', sql.VarChar);
+	ps.input('LogID', sql.VarChar);
+	ps.input('TransactionID', sql.VarChar);
+	ps.input('AccountID', sql.VarChar);
+
+    var command = "INSERT INTO ipUtilReqLogging (RequestLog,LogID TransactionID, AccountID) VALUES (@RequestLog, @LogID, @TransactionID, @AccountID)";
+
+    ps.prepare(command, function(err) {
+
+        ps.execute({'RequestLog':soapContent, 'LogID': guid, 'TransactionID' : transactionID, 'AccountID' : accountID}, function(err, recordset) {
+            callback(err, recordset);
+            //callback(false);
+            ps.unprepare(function(err) {
+                // ... error checks
+                console.log("gip Connection closed");
+                connection.close();
+            });
+        });
+    })
+
+}
